@@ -2,39 +2,27 @@ package dip.lab1.student.solution1;
 
 /**
  * Change to implement Employee interface and include code pertinent to
- * Salaried Employee
+ * Salaried Employee only
  *
  * @author Teresa Mahoney
  */
 public class SalariedEmployee implements Employee {
     
     private double annualSalary;
-    private double annualBonus;
-
+    
     /** default constructor. Is this the best way to go? */
     public SalariedEmployee() {}
 
     /**
      * Convenience constructor. Is this the best way to go?
      * @param annualSalary - the employee's annual salary
-     * @param annualBonus - a bonus benefit, if any
+    
      */
-    public SalariedEmployee(double annualSalary, double annualBonus) {
+    public SalariedEmployee(double annualSalary) {
         this.annualSalary=annualSalary;
-        this.annualBonus=annualBonus;
+        
     }
-     public double getAnnualBonus() {
-        return annualBonus;
-    }
-
-    /**
-     * Is this polymorphic? Should it be? Does it belong here?
-     * @param annualBonus -- think carefully about this
-     */
-    public void setAnnualBonus(double annualBonus) {
-        this.annualBonus = annualBonus;
-    }
-
+     
     /**
      * Is this polymorphic? Should it be? Does it belong here?
      * @return
@@ -55,7 +43,7 @@ public class SalariedEmployee implements Employee {
 
     @Override
     public double getAnnualCompensationForEmployee() {
-        return annualSalary+annualBonus;
+        return annualSalary;
     }
 
     

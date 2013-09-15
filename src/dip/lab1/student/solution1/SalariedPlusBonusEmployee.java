@@ -1,12 +1,11 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Detail Class for SalariedPlusBonus
  */
 package dip.lab1.student.solution1;
 
 /**
  *
- * @author Owner
+ * @author Teresa Mahoney
  */
 public class  SalariedPlusBonusEmployee implements Employee{
     private double annualSalary;

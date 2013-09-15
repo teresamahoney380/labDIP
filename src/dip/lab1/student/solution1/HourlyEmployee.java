@@ -6,10 +6,15 @@ package dip.lab1.student.solution1;
  *
  * @author your name goes here
  */
-public class HourlyEmployee extends Employee {
+public class HourlyEmployee implements Employee {
+    private double hourlyRate;
+    private double totalHrsForYear;
+    
     
     /** default constructor. Is this the best way to go? */
-    public HourlyEmployee() {}
+    public HourlyEmployee() {
+        
+    }
 
     /**
      * Convenience constructor. Is this the best way to go?
@@ -17,8 +22,45 @@ public class HourlyEmployee extends Employee {
      * @param totalHrsForYear - total hours worked or predicted per year
      */
     public HourlyEmployee(double hourlyRate, double totalHrsForYear) {
-        setHourlyRate(hourlyRate);
-        setTotalHrsForYear(totalHrsForYear);
+        this.hourlyRate=hourlyRate;
+        this.totalHrsForYear=totalHrsForYear;
+    }
+    /**
+     * Is this polymorphic? Should it be? Does it belong here?
+     * @return
+     */
+    public double getHourlyRate() {
+        return hourlyRate;
+    }
+
+    /**
+     * Is this polymorphic? Should it be? Does it belong here?
+     * @param hourlyRate -- think carefully about this
+     */
+    public void setHourlyRate(double hourlyRate) {
+        this.hourlyRate = hourlyRate;
+    }
+
+    /**
+     * Is this polymorphic? Should it be? Does it belong here?
+     * @return
+     */
+    public double getTotalHrsForYear() {
+        return totalHrsForYear;
+    }
+
+    /**
+     * Is this polymorphic? Should it be? Does it belong here?
+     * @param totalHrsForYear -- think carefully about this
+     */
+    public void setTotalHrsForYear(double totalHrsForYear) {
+        this.totalHrsForYear = totalHrsForYear;
+    }
+
+
+    @Override
+    public double getAnnualCompensationForEmployee() {
+        return hourlyRate*totalHrsForYear;
     }
 
 }

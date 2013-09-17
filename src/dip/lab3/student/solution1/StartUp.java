@@ -12,7 +12,7 @@ public class StartUp {
         
         MessageService messageService;
         
-        MessageInput messageInput=new ConsoleInput();
+        MessageInput messageInput=new GuiInput();
         MessageOutput messageOutput = new GuiOutput();
         
         messageService = new MessageService(messageInput, messageOutput);
